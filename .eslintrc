@@ -1,0 +1,52 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+      "es6": true,
+      "node": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true,
+          "experimentalObjectRestSpread": true
+      }
+  },
+  "globals": {
+      "$": true,
+      "window": true,
+      "document": true,
+      "__dirname": true
+  },
+  "rules": {
+      "indent": ["error", 4],
+      "react/jsx-indent": ["error", 4],
+      "react/jsx-indent-props": ["error", 4],
+      "linebreak-style": 0,
+      "max-len": ["error", 200],
+      "wrap-iife": ["error", "inside"],
+      "no-console": 0,
+      "no-new": 0,
+      "no-new-func": 1,
+      "func-names": 0,
+      "no-underscore-dangle": 0,
+      "no-useless-concat": 0,
+      "no-param-reassign": [2, { "props": false }],
+      "space-before-function-paren": ["error", "never"],
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "yoda": [1, "never", {
+          "exceptRange": true,
+          "onlyEquality": true
+      }],
+      "no-implicit-coercion": [
+          2,
+          {
+              "boolean": true,
+              "number": true,
+              "string": true,
+              "allow": []
+          }
+      ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "ws-request",
+  "version": "1.0.0",
+  "description": "Observer for Webscoket",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "dev": "BABEL_ENV=commonjs babel --watch ./src --out-dir ./build --source-maps",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingzhang/ws-request.git"
+  },
+  "contributors": [
+    "KingZhang"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kingzhang/ws-request/issues"
+  },
+  "homepage": "https://kingzhang.github.io/ws-request",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-react-app": "^3.1.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-skeleton": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.44.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.9.2",
+    "prettier-eslint": "^8.7.0",
+    "uglify-js": "^3.2.2"
+  }
+}
