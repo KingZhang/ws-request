@@ -46,11 +46,15 @@ const wsrequest = (function() {
     };
 
     WSRequest.prototype.send = function(msg) {
-        this.ws.send(msg);
+        if (this.ws) {
+            this.ws.send(msg);
+        }
     };
 
     WSRequest.prototype.close = function() {
-        this.ws.close();
+        if (this.ws) {
+            this.ws.close();
+        }
     };
 
     WSRequest.prototype.isOpen = function() {
@@ -58,8 +62,12 @@ const wsrequest = (function() {
     };
 
     // inherit Observer subscribe&unsubscribe function
-    WSRequest.prototype.subscribe = this.observer.subscribe;
-    WSRequest.prototype.unsubscribe = this.observer.unsubscribe;
+    WSRequest.prototype.subscribe = function(observerName, callback, once) {
+        this.observer.subscribe(observerName, callback, once);
+    };
+    WSRequest.prototype.unsubscribe = function(observerName, callback) {
+        this.observer.unsubscribe(observerName, callback);
+    };
 
     return WSRequest;
 })();

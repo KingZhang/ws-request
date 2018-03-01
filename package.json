@@ -1,6 +1,6 @@
 {
   "name": "ws-request",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Observer for Webscoket",
   "main": "build/index.js",
   "scripts": {
